@@ -1,0 +1,101 @@
+.CartCard {
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  animation: fadeSlide 0.5s ease;
+  transition: transform 0.3s;
+}
+
+.CartCard:hover {
+  transform: scale(1.01);
+}
+
+.left_card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left_card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.name_price {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.right_card button {
+  padding: 10px 15px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.right_card button:hover {
+  background-color: #d9363e;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .CartCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .left_card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .name_price {
+    align-items: flex-start;
+  }
+
+  .right_card {
+    align-self: flex-end;
+    width: 100%;
+  }
+
+  .right_card button {
+    width: 100%;
+    justify-content: center;
+  }
+}

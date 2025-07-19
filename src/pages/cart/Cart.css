@@ -1,0 +1,158 @@
+/* CART MAIN CONTAINER */
+.cart {
+  width: 100%;
+  min-height: 80vh;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+}
+
+/* EMPTY CART MESSAGE */
+.emptyCart {
+  text-align: center;
+  font-size: 24px;
+  color: gray;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* CART SECTION WITH MULTIPLE ITEMS */
+.cartCart_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideUp 0.6s ease;
+}
+
+/* PRICE SECTION */
+.price_section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* INDIVIDUAL CART CARD */
+.CartCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  transition: transform 0.3s ease;
+}
+
+.CartCard:hover {
+  transform: translateY(-4px);
+}
+
+/* LEFT SIDE WITH IMAGE & TEXT */
+.left_card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* PRODUCT IMAGE */
+.left_card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+}
+
+/* NAME & PRICE TEXT */
+.name_price {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.name_price span:first-child {
+  font-weight: bold;
+  color: #222;
+}
+.name_price span:last-child {
+  color: #666;
+}
+
+/* RIGHT SIDE REMOVE BUTTON */
+.right_card button {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.right_card button:hover {
+  background: #d9363e;
+}
+
+/* ANIMATIONS */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .cart {
+    padding: 20px 10px;
+  }
+
+  .CartCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left_card {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .right_card {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .price_section {
+    font-size: 16px;
+    text-align: center;
+  }
+}
